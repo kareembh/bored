@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import Button from './components/Button/Button'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import Activity from './components/Activity/Activity';
 
 function App() {
+
+  const [activities, setActivities] = useState({})
+  const [showActivity, setShowActivity] = useState(false)
+
+  const getActivities = async () =>{
+    try{
+      const response = await axios.get('https://www.boredapi.com/api/activity')
+      setActivities(response.data)
+      setShowActivity(true)
+    }catch{
+      console.log("api is down")
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showActivity ? <Activity activity={activities}/>: null}
+     <Button 
+        getActivities={getActivities}
+        buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
+      />
     </div>
   );
 }
