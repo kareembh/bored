@@ -6,15 +6,19 @@ import Activity from './components/Activity/Activity';
 
 function App() {
 
-  const [activities, setActivities] = useState({})
-  const [showActivity, setShowActivity] = useState(false)
+  //State declarations
+  const [activities, setActivities] = useState({});
+  const [showActivity, setShowActivity] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
+  // Function declarations
   const getActivities = async () =>{
     try{
       const response = await axios.get('https://www.boredapi.com/api/activity')
       setActivities(response.data)
       setShowActivity(true)
     }catch{
+      // setShowModal(true)
       console.log("api is down")
     }
   }
