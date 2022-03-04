@@ -13,18 +13,20 @@ function App() {
   const [showActivity, setShowActivity] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // Function declarations
+  // get activity api call function
   const getActivities = async () =>{
     try{
-      const response = await axios.get('https://www.boredapi.com/api/activity')
+      const response = await axios.get('ttps://www.boredapi.com/api/activity')
       setActivities(response.data)
       setShowActivity(true)
+      setShowModal(false);
     }catch{
       setShowModal(true)
       console.log("api is down")
     }
   }
 
+  //close modal function
   const closeModal = () =>{
     console.log("closing modal")
     setShowModal(false);
@@ -33,7 +35,7 @@ function App() {
   return (
     <div className="app">
       {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
-      {showModal ? <Modal className="modal-display"  closeModal={closeModal}/>: null}
+      {showModal ? <Modal className="modal-display" modalText='API is currently down'  closeModal={closeModal}/>: null}
       <Button
         className="i-am-bored-button"
         handleClick={getActivities}

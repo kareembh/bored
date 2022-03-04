@@ -3,8 +3,8 @@ import './Modal.css'
 
 const Modal = (props) =>{
     return(
-        <div className="btn" onClick={props.getActivities}>
-            <p className="btn-text">{props.buttonText}</p>
+        <div className="modal">
+            <p className="modal-text">{props.modalText}</p>
             <Button 
                 handleClick={props.closeModal}
                 buttonText="Close"
