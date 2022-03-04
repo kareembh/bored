@@ -6,7 +6,7 @@ const Modal = (props) =>{
         <div className="btn" onClick={props.getActivities}>
             <p className="btn-text">{props.buttonText}</p>
             <Button 
-                onClick={props.closeModal}
+                handleClick={props.closeModal}
                 buttonText="Close"
             /> 
         </div>

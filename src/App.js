@@ -1,7 +1,7 @@
 import Button from './components/Button/Button'
 import Activity from './components/Activity/Activity';
 import Modal from './components/Modal/Modal';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -26,16 +26,17 @@ function App() {
   }
 
   const closeModal = () =>{
+    console.log("closing modal")
     setShowModal(false);
   }
 
   return (
     <div className="app">
       {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
-      {showModal ? <Modal className="modal-display" closeModal={closeModal}/>: null}
+      {showModal ? <Modal className="modal-display"  closeModal={closeModal}/>: null}
       <Button
         className="i-am-bored-button"
-        getActivities={getActivities}
+        handleClick={getActivities}
         buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
       />
     </div>
