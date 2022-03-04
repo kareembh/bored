@@ -24,9 +24,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-      {showActivity ? <Activity activity={activities}/>: null}
-     <Button 
+    <div className="app">
+      {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
+      <Button
+        className="i-am-bored-button"
         getActivities={getActivities}
         buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
       />

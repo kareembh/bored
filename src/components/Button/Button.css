@@ -1,0 +1,19 @@
+.btn{
+    width: 130px;
+    height: 40px;
+    background-color: aqua;
+    border: solid black 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    width: 135px;
+    height: 45px;
+    background-color: rgb(106, 235, 235);
+}
+
+.btn-text{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

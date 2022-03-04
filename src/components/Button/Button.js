@@ -1,8 +1,9 @@
+import './Button.css'
 const Button = (props) =>{
     return(
-    <div onClick={props.getActivities}>
-        <h1>{props.buttonText}</h1>
-    </div>
+        <div className="btn" onClick={props.getActivities}>
+            <p className="btn-text">{props.buttonText}</p>
+        </div>
     )
 }
 
