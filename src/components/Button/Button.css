@@ -7,15 +7,12 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn:hover{
     width: 165px;
     height: 45px;
     background-color: rgb(16, 145, 145);
     cursor: pointer;
-}
-
-.btn-text{
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
