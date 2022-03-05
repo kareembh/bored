@@ -1,0 +1,19 @@
+.activity-card{
+    border: solid black 2px;
+    width: 330px;
+    margin-bottom: 60px;
+    background-color: crimson;
+    padding: 15px
+}
+
+.activity-name{
+    font-size: 26px;
+    font-family: monospace;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.activity-details{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}

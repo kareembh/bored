@@ -16,7 +16,7 @@ function App() {
   // get activity api call function
   const getActivities = async () =>{
     try{
-      const response = await axios.get('ttps://www.boredapi.com/api/activity')
+      const response = await axios.get('https://www.boredapi.com/api/activity')
       setActivities(response.data)
       setShowActivity(true)
       setShowModal(false);
@@ -28,19 +28,21 @@ function App() {
 
   //close modal function
   const closeModal = () =>{
-    console.log("closing modal")
     setShowModal(false);
   }
 
   return (
     <div className="app">
-      {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
-      {showModal ? <Modal className="modal-display" modalText='API is currently down'  closeModal={closeModal}/>: null}
-      <Button
-        className="i-am-bored-button"
-        handleClick={getActivities}
-        buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
+      {/* {showModal ? <Modal className="modal-display" modalText='API is currently down'  closeModal={closeModal}/>: null} */}
+      <div className='activity-container'>
+        {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
+        <Button
+          className="i-am-bored-button"
+          handleClick={getActivities}
+          buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
       />
+      </div>
+      
     </div>
   );
 }
