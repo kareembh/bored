@@ -16,7 +16,7 @@ function App() {
   // get activity api call function
   const getActivities = async () =>{
     try{
-      const response = await axios.get('ttps://www.boredapi.com/api/activity')
+      const response = await axios.get('https://www.boredapi.com/api/activity')
       setActivities(response.data)
       setShowActivity(true)
       setShowModal(false);

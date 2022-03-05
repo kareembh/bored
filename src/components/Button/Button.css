@@ -1,16 +1,17 @@
 .btn{
-    width: 130px;
-    height: 40px;
+    width: 160px;
+    height: 45px;
     background-color: aqua;
     border: solid black 0.5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 .btn:hover{
-    width: 135px;
+    width: 165px;
     height: 45px;
-    background-color: rgb(106, 235, 235);
+    background-color: rgb(16, 145, 145);
     cursor: pointer;
 }
 

@@ -3,7 +3,8 @@
     width: 330px;
     margin-bottom: 60px;
     background-color: crimson;
-    padding: 15px
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .activity-name{
