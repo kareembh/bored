@@ -20,3 +20,13 @@
 .activity-display{
   
 }
+
+.social-bar {
+  display: flex;
+  flex-wrap: wrap;;
+}
+
+.top-right {
+  flex: 50%;
+  text-align: right;
+}

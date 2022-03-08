@@ -1,0 +1,10 @@
+.social-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.top-right {
+    position: fixed;
+    left: 85%;
+    top: 5%;
+  }

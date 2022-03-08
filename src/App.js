@@ -1,5 +1,6 @@
 import Button from './components/Button/Button'
 import Activity from './components/Activity/Activity';
+import SocialBar from './components/SocialBar/SocialBar';
 import Modal from './components/Modal/Modal';
 import { useState } from 'react';
 import axios from 'axios';
@@ -22,7 +23,7 @@ function App() {
       setShowModal(false);
     }catch{
       setShowModal(true)
-      console.log("api is down")
+      console.log('api is down')
     }
   }
 
@@ -32,17 +33,17 @@ function App() {
   }
 
   return (
-    <div className="app">
-      {showModal ? <Modal className="modal-display" modalText='API is currently down'  closeModal={closeModal}/>: null}
+    <div className='app'>
+      {showModal ? <Modal className='modal-display' modalText='API is currently down'  closeModal={closeModal}/>: null}
       <div className='activity-container'>
-        {showActivity ? <Activity className="activity-display" activity={activities}/>: null}
+        {showActivity ? <Activity className='activity-display' activity={activities}/>: null}
         <Button
-          className="i-am-bored-button"
+          className='i-am-bored-button'
           handleClick={getActivities}
           buttonText={showActivity ? 'I\'m still bored' : 'I\'m bored'}
       />
       </div>
-      
+        <SocialBar />
     </div>
   );
 }
