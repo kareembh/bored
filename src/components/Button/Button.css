@@ -9,10 +9,12 @@
     border-radius: 10px;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 2px 2px 2px rgb(8, 31, 31);
 }
 .btn:hover{
     width: 165px;
     height: 45px;
     background-color: rgb(16, 145, 145);
     cursor: pointer;
+    box-shadow: 3px 3px 3px rgb(8, 31, 31);
 }
