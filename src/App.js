@@ -10,9 +10,10 @@ import './App.css';
 
 function App() {
 
+  const GA = 'UA-222484665-1'
   //setting google analytics
   const setGA = () => {
-    ReactGA.initialize('UA-222484665-1');
+    ReactGA.initialize({GA});
     ReactGA.pageview('Init page view');
   };
 
