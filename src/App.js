@@ -12,7 +12,7 @@ function App() {
 
   //setting google analytics
   const setGA = () => {
-    ReactGA.initialize('UA-222484665-2');
+    ReactGA.initialize('UA-222484665-1');
     ReactGA.pageview('Init page view');
   };
 
