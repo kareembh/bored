@@ -11,7 +11,7 @@ import './App.css';
 function App() {
 
   //setting google analytics
-  setGA = () => {
+  const setGA = () => {
     ReactGA.initialize('G-Z8R2PH8SSZ');
     ReactGA.pageview('Init page view');
   };
