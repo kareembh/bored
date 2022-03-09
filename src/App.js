@@ -2,12 +2,19 @@ import Button from './components/Button/Button'
 import Activity from './components/Activity/Activity';
 import SocialBar from './components/SocialBar/SocialBar';
 import Modal from './components/Modal/Modal';
+import ReactGA from 'react-ga'
 import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
 
 function App() {
+
+  //setting google analytics
+  setGA = () => {
+    ReactGA.initialize('G-Z8R2PH8SSZ');
+    ReactGA.pageview('Init page view');
+  };
 
   //State declarations
   const [activities, setActivities] = useState({});
